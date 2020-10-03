@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tiles_website'
 ]
+
+#add config 
+cloudinary.config(
+  cloud_name = 'darshan1999',
+  api_key = '914179865436577',
+  api_secret = '4cz-_JUUtXQmRk_L6FbWvZbNgq0',
+  secure = True
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
