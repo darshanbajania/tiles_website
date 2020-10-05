@@ -5,10 +5,15 @@ from django.contrib.auth import authenticate, login, logout
 
 def Home_view(request):
     carousal_images = Home_page_images.objects.all().first()
+    category1_tiles = Product_tile.objects.filter(tile_pattern= 'Marble')
+    category2_tiles = Product_tile.objects.filter(tile_pattern = 'wood')
+    print(category1_tiles)
     context = {
         'home_images' : carousal_images,
+        'category1' : category1_tiles,
+        'category2' : category2_tiles,
     }
-    print(type(carousal_images))
+    # print(type(carousal_images))
     return render(request, 'tiles_website/base.html', context)
 
 def Product_view(request):
