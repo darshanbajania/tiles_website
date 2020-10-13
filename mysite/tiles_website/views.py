@@ -58,3 +58,12 @@ def Login_view(request):
 
 def admin_dashboard_view(request):
     return render(request, 'tiles_website/admin_dashboard.html')
+
+def Floor_tiles_view(request):
+    return render(request, 'tiles_website/floor_tiles.html')
+
+def Kitchen_tiles_view(request):
+    return render(request, 'tiles_website/kitchen_tiles.html')
+
+def Wall_tiles_view(request):
+    return render(request, 'tiles_website/wall_tiles.html')

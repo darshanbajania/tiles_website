@@ -14,6 +14,9 @@ urlpatterns = [
     path('Login/',views.Login_view, name = 'login_page'),
     path('logout/', LogoutView.as_view(next_page='tiles_website:home'),name="logout_url"),
     path('Dashboard/',views.admin_dashboard_view, name = 'admin_dashboard_page'),
+    path('floor_tiles/',views.Floor_tiles_view, name = 'floor_tiles_page'),
+    path('kitchen_tiles/',views.Kitchen_tiles_view, name = 'kitchen_tiles_page'),
+    path('wall_tiles/',views.Wall_tiles_view, name = 'wall_tiles_page'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
